@@ -4,7 +4,32 @@ This project is a complete machine learning pipeline to classify whether a sonar
 
 ## 📂 Project Structure
 
-<pre> ```text sonar-rock-vs-mine/ ├── artifact/ ├── notebook/ ├── src/ │ ├── components/ │ │ ├── data_ingestion.py │ │ ├── data_transformation.py │ │ ├── model_trainer.py │ │ └── __init__.py │ ├── pipeline/ │ │ ├── train_pipeline.py │ │ ├── predict_pipeline.py │ │ └── __init__.py │ ├── exception.py │ ├── logger.py │ ├── utils.py │ └── __init__.py ├── app.py ├── requirements.txt ├── README.md └── .gitignore ``` </pre>
+sonar-rock-vs-mine/
+│
+├── artifact/                    # Stores generated model, preprocessor, label encoder
+├── notebook/                    # Optional: Jupyter notebook explorations
+├── src/
+│   ├── components/
+│   │   ├── data_ingestion.py        # Loads and splits raw data
+│   │   ├── data_transformation.py   # Preprocessing, scaling, label encoding
+│   │   ├── model_trainer.py         # Model training, hyperparameter tuning
+│   │   └── __init__.py
+│   │
+│   ├── pipeline/
+│   │   ├── train_pipeline.py        # Runs the complete training pipeline
+│   │   ├── predict_pipeline.py      # Loads model and predicts from new input
+│   │   └── __init__.py
+│   │
+│   ├── exception.py                 # Custom error handler
+│   ├── logger.py                    # Logging setup
+│   ├── utils.py                     # Utility methods (save_object, load_object, evaluate_models)
+│   └── __init__.py
+│
+├── app.py                       # FastAPI server
+├── requirements.txt             # Dependencies
+├── README.md                    # Project guide
+└── .gitignore
+
 
 ---
 
