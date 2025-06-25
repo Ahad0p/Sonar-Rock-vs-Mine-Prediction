@@ -8,6 +8,9 @@ import pandas as pd
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
 
+from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainerConfig
+
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
@@ -55,3 +58,6 @@ if __name__ == "__main__":
     # Optional: print to verify paths
     print("Preprocessor saved at:", preprocessor_path)
     print("Label encoder saved at:", label_encoder_path)
+
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
